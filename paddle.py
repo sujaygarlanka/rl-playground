@@ -23,6 +23,7 @@ class Paddle():
         # Paddle
 
         self.paddle = t.Turtle()
+        # self.paddle.hideturtle()
         self.paddle.speed(0)
         self.paddle.shape('square')
         self.paddle.shapesize(stretch_wid=1, stretch_len=5)
@@ -33,6 +34,7 @@ class Paddle():
         # Ball
 
         self.ball = t.Turtle()
+        # self.ball.hideturtle()
         self.ball.speed(0)
         self.ball.shape('circle')
         self.ball.color('red')
@@ -123,6 +125,7 @@ class Paddle():
 
         self.paddle.goto(0, -275)
         self.ball.goto(0, 100)
+        self.ball.dx *= -1
         return [self.paddle.xcor()*0.01, self.ball.xcor()*0.01, self.ball.ycor()*0.01, self.ball.dx, self.ball.dy]
 
     def step(self, action):
